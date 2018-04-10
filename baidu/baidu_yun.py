@@ -74,17 +74,17 @@ class BaiduYun(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    # testunit = unittest.TestSuite()
-    # # 将测试用例加入到测试容器中
-    # testunit.addTest(BaiduYun("Login"))
-    # testunit.addTest(BaiduYun("Register"))
-    # testunit.addTest(BaiduYun("Link"))
-    # unittest.TextTestRunner().run(testunit)
+    testunit = unittest.TestSuite()
+    # 将测试用例加入到测试容器中
+    testunit.addTest(BaiduYun("Login"))
+    testunit.addTest(BaiduYun("Register"))
+    testunit.addTest(BaiduYun("Link"))
+    unittest.TextTestRunner().run(testunit)
 
     # 获取当前时间，这样便于下面的使用。
-    # now = time.strftime("%Y-%m-%M-%H_%M_%S", time.localtime(time.time()))
-    # # 打开一个文件，将result写入此file中
-    # fp = open("result" + now + ".html", 'wb')
-    # runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='test result', description=u'result:')
-    # runner.run(testunit)
-    # fp.close()
+    now = time.strftime("%Y-%m-%M-%H_%M_%S", time.localtime(time.time()))
+    # 打开一个文件，将result写入此file中
+    fp = open("result" + now + ".html", 'wb')
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title='test result', description=u'result:')
+    runner.run(testunit)
+    fp.close()
